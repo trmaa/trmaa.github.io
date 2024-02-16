@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Info stuff</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body id="body">
+
+<header>
+    <div id="top" class="button" onclick="show('parts/home.html');">
+        <img src="favicon.png" id="logo">
+        <p style="padding-top: 10px;font-size: 30px;">Info stuff by https://trmaa.github.io</p>
+    </div>
+
+    <ul style="list-style-type: none; display: flex; padding-top: 45px; text-align: center;">
+        <li style="margin-right: 20px;">Contribute</li>
+        <li style="margin-right: 20px;">Search</li>
+        <li style="margin-right: 20px;" onclick="show('parts/stock.html')">The newest</li>
+        <li>FAQ</li>
+    </ul>
+</header>
+
+<div id="main">
+
+<iframe src="parts/home.html" id="articulo"></iframe>
+<dir id="indice"><iframe src="parts/home-indx.html" id="indx"></iframe></dir>
+
+</div>
+
+<script type="text/javascript">
+
+function show(dir) {
+    document.getElementById("articulo").src = dir;
+    document.getElementById("indx").src = dir.replace(".html", "-indx.html");
+}
+</script>
+
+</body>
+</html>
