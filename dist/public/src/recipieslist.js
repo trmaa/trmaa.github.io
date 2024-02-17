@@ -1,22 +1,8 @@
-import { pixa,verify } from "./pixabay.js";
-
-async function read() {
-    const json = './src/html_files.json';
-    try {
-        const respuesta = await fetch(json);
-        if (!respuesta.ok) {
-            throw new Error('Error al cargar el archivo JSON');
-        }
-        const datosJSON = await respuesta.text(); 
-        const datos = JSON.parse(datosJSON);
-        return datos;
-    } catch (error) {
-        console.error('Error al leer el archivo JSON:', error);
-    }
-}
+import { pixa, verify } from "./pixabay.js";
+import { read } from "./json.js";
 
 async function main() {
-    let data = await read();
+    let data = await read('./src/html_files.json');
     console.log(data);
 
     let article = document.querySelector("#articulo");
@@ -28,13 +14,17 @@ async function main() {
             let localImageURL = `./pages/${encodeURIComponent(item.title.trim())}.jpg`;
             let imageExists = await verify(localImageURL);
             let imageURL = imageExists ? localImageURL : await pixa(item.title.trim());
-            
+
+            let encodedTitle = encodeURIComponent(item.title.trim()).replace(/%20/g, '_');
+
+            let descripcion = await read(`./pages/${encodedTitle}.json`);
+
             components.push(`
                 <div class="miniatura">
-                   <div class="img"><img src="${imageURL}"></img></div>
+                   <div class="img" style="border-radius:10px;"><img src="${imageURL}"></img></div>
                    <h3>${item.title}</h3>
-                   <p>Fantastic dish</p>
-                   <div class="button"><button onclick="window.goTo('./pages/${encodeURIComponent(item.title.trim())}.html')">See more</button></div>
+                   <p>${descripcion.text}</p>
+                   <div class="button"><button onclick="window.goTo('./pages/${encodedTitle}.html')">See more</button></div>
                 </div>
             `);
         } catch (error) {

@@ -1,4 +1,16 @@
 <link rel="stylesheet" type="text/css" href="../main.css">
+<style type="text/css">
+    
+a, li{
+    font-weight: bold;
+    padding-left: 10px;
+    cursor: pointer;
+}
+a:hover, li:hover{
+    color: #fc0;
+}
+
+</style>
 <script type="module" src="../src/redirect.js"></script>
 <div>
     <div id="top" class="button" onclick="window.parent.goHome()">
@@ -10,6 +22,6 @@
         <li style="margin-right: 20px;">Contribute 📜</li>
         <li style="margin-right: 20px;" onclick="window.parent.goHome()">Search 🔎</li>
         <li style="margin-right: 20px;" onclick="window.parent.goTo('../risotto.html')">The newest ❗</li>
-        <li>FAQ ❓</li>
+        <li style="margin-right: 20px;">FAQ ❓</li>
     </ul>
 </div>
