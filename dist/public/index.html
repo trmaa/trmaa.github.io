@@ -6,6 +6,16 @@
     <title>YUMMY</title>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="icon" type="image/png" href="favicon.png">
+<style type="text/css">
+  
+#articulo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap:15px;
+}
+
+</style>
 </head>
 <body id="body">
 
@@ -14,13 +24,12 @@
 <div id="main">
 
     <div id="articulo"></div>
-    <dir id="indice"><div id="indx"></div></dir>
+    <div id="indice"><div id="indx"></div>
 
 </div>
 
-</body>
-
-
 <script type="module" src="src/recipieslist.js"></script>
+<script type="module" src="src/redirect.js"></script>
 
+</body>
 </html>

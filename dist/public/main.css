@@ -3,7 +3,7 @@
     --black: linear-gradient(to bottom right, #001, #000, #000); 
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 0;
 }
 
@@ -53,7 +53,7 @@ header{
      display: flex;
      position: fixed;
      top: 0;
-     background-color: #fc02;
+     background-color: #fea;
      overflow: hidden;
 }
 div #top{
@@ -72,7 +72,7 @@ header:hover{
     padding: 8px;
 }
 
-p, a, li{
+p, a, li, button{
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 30px;
@@ -97,10 +97,16 @@ h1{
     font-family: consolas, sans-serif;
     padding-bottom: 20px;
 }
-h2{
+h2, h3{
+    font-size: 30px;
     padding-left: 25px;
     width: 80%;
     border-bottom: solid 3px #fc0;
+}
+
+ h3{
+    font-size: 30px;
+    border: none;
 }
 
 iframe{
@@ -125,23 +131,51 @@ iframe{
 }
 
 
-#img{
-    margin: 0;
+.img {
     display: flex;
     justify-content: center;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     overflow: hidden;
-
-    width: 70%;
+    width: 100%;
 }
-img{
-    width: 256px;
+
+img {
+    width: 128px;
 }
 
 #br{
     height: 100px;
 }
 
-.button{
+.button, button{
     cursor: pointer;
+    padding-left: 25px;
+    width: 100%;
+}
+button{
+    border: 2px solid #fc00;
+    border-radius: 5px;
+    background-color: #fc0;
+    padding: 10px;
+    width: 70%;
+}
+button:hover{
+    border: 2px solid #fc0;
+    background-color: #fc00;
+}
+
+.miniatura{
+    border: 2px solid #0000;
+    border-radius: 10px;
+    height: 300px;
+    grid-row:span 1;
+}
+
+.miniatura:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra al hacer hover */
+}
+
+.miniatura img{
+    border-radius: 10px;
 }
