@@ -35,7 +35,7 @@
 }
 
 #main{
-    padding-top: 95px;
+    padding-top: 105px;
     width: 55vw;
     height: 100vh;
     overflow-x: hidden;
@@ -141,7 +141,7 @@ iframe{
 }
 
 img {
-    width: 128px;
+    width: 100%;
 }
 
 #br{
@@ -170,6 +170,10 @@ button:hover{
     border-radius: 10px;
     height: 300px;
     grid-row:span 1;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column; 
 }
 
 .miniatura:hover {
