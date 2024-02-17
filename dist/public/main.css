@@ -63,7 +63,7 @@ div #top{
      top: 0;
 }
 header:hover{
-    height: 90px;
+    height: 100px;
 }
 
 #logo{
@@ -89,6 +89,7 @@ a:hover, li:hover{
 }
 li{
     width: 150px;
+    height: 40;
     text-align: center;
 }
 
