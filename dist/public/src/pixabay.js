@@ -1,4 +1,4 @@
-export function pixa(title) {
+export async function pixabay_getImg(title) {
     let API_KEY = '42418904-7d853210b63cef25443e25d4b';
     let URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(title);
     

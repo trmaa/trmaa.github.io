@@ -1,52 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" lang="en">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>YUMMY</title>
+    <title>BEST POLITICAL TEST</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat">
+    <link rel="stylesheet" type="text/css" href="back.css">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="icon" type="image/png" href="favicon.png">
-<style type="text/css">
-  
-#articulo {
-    display: grid;
-    grid-gap: 15px;
-}
-
-@media screen and (max-width: 600px) {
-    #articulo {
-        grid-template-columns: repeat(1, 1fr); 
-    }
-}
-
-@media screen and (min-width: 601px) and (max-width: 900px) {
-    #articulo {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-
-@media screen and (min-width: 901px) {
-    #articulo {
-        grid-template-columns: repeat(3, 1fr); 
-    }
-}
-
-</style>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="module"src="./src/recipieslist.js"></script>
-
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body id="body">
+<body>
+<div id="body">
+    <h1>THE BEST POLITICAL IDEOLOGY TEST</h1>
+    <div id="questions"></div>
+</div>
+<div class="area" style="border-radius: 0;" >
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+</div >
 
-<header><iframe src="components/header.html"></iframe></header>
-
-<div id="main">
-
-    <div id="articulo"></div>
-    
+<div id="footer">
+    <div id="barra"></div>
 </div>
 
-<script type="module" src="src/redirect.js"></script>
+<script type="module" src="./src/questionManager.js"></script>
+<script type="module" src="./src/style.js"></script>
+<script type="module" src="./src/loadingBar.js"></script>
 
 </body>
 </html>

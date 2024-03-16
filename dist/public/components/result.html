@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BEST POLITICAL TEST</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat">
+    <link rel="stylesheet" type="text/css" href="back.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style type="text/css">
+
+    #calc{
+        padding-top: 20px;
+        height: 60vh;
+        display: grid;
+        grid-template-columns: 2fr 6fr;
+        column-gap: 20px;
+    }
+
+    #info{
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    </style>
+</head>
+<body>
+<div id="body">
+    <h1>THE BEST POLITICAL IDEOLOGY TEST</h1>
+    <div id="questions"></div>
+
+    <div id="calc">It didn't load, sorry...</div>
+
+    <div id="info">
+        <div id="examples">
+            <div class="muestra" style="background:#55f;">..</div>: Hitler, Mussolini, Franco, Milei, Donald Trump...
+            <div class="muestra" style="background:#f55;">..</div>: Lenin, Stalin...
+            <div class="muestra" style="background:#ff5;">..</div>: Marx, Che, Durruti...
+            <div class="muestra" style="background:#5ff;">..</div>: Elon Musk...
+        </div>
+        <div id="explanation">
+            <b>Graphic explanation:</b>
+            X axis means in favor of private property over production systems, and Y axis means public property over production systems.
+        </div>
+    </div>
+</div>
+<div class="area" style="border-radius: 0;" >
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+</div >
+
+<div id="footer">
+    <div id="barra"></div>
+</div>
+
+<script type="module" src="./src/style.js"></script>
+<script type="text/javascript">
+    
+function graph(){
+    let graph = `
+        <div id="graph" style="
+            background:#0000;
+            width:100%;
+            height:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        ">
+            <div style="
+                background:#0000;
+                width:100%;
+                height:100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                z-index:-1;
+            ">
+                <div style="background:#f55; border-radius:0;"></div>
+                <div style="background:#55f; border-radius:0;"></div>
+                <div style="background:#ff5; border-radius:0;"></div>
+                <div style="background:#5ff; border-radius:0;"></div>
+            </div>
+
+            <div id="pointer" style="
+                background:#0000;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                border: 5px solid #000;
+                position:relative;
+                z-index:2;
+                display: flex;
+            "></div>
+
+            <div id="sillyzone" style="
+                background:#0000;
+                width: 200px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                border: 10px dashed #af0;
+                position:absolute;
+                z-index:1;
+            "></div>
+
+            <div id="sillyzone" style="
+                width: 800px;
+                height: 800px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: radial-gradient(circle at 50% 50%, #ffff 0%, rgba(255, 255, 255, 0) 50%);
+                position:absolute;
+                z-index:0;
+            "></div>
+        </div>
+    `;
+    document.querySelector("#right").innerHTML = graph;
+
+    const Fascist = parseInt(document.querySelector("#Fascist").innerHTML);
+    const Sovietic =  parseInt(document.querySelector("#Sovietic").innerHTML);
+    const Comunist =  parseInt(document.querySelector("#Comunist").innerHTML);
+    const Liberal = parseInt(document.querySelector("#Liberal").innerHTML);
+
+    let y = (Fascist+Sovietic-Liberal-Comunist)/3//*2.5;
+    let x = (Fascist+Liberal-Comunist-Sovietic)/3//*1.3;
+    
+    console.log(x +" - "+ y)
+
+    let pointer = document.querySelector("#pointer");
+    pointer.style.left = `calc(${x}% - 50%)`;
+    pointer.style.bottom = `${y}%`;
+}
+
+let inter = setInterval(() => {
+    console.log("a")
+    if (document.getElementById("calc").innerHTML !== "loading...") {
+        (async () => {
+            graph();
+            clearInterval(inter);
+        })();
+    }
+}, 100);
+
+</script>
+
+</body>
+</html>

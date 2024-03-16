@@ -1,4 +1,4 @@
-export async function read(pack) {
+export async function json_read(pack) {
     const json = pack;
     try {
         const respuesta = await fetch(json);
@@ -12,5 +12,45 @@ export async function read(pack) {
     } catch (error) {
         console.error('Error al leer el archivo JSON:', error);
         return "";
+    }
+}
+
+export function json_download(datos){
+    const jsonString = JSON.stringify(datos, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = './results.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+export async function json_instance(datos){
+    const params = new URLSearchParams();
+    for (const key in datos) {
+        params.append(key, datos[key]);
+    }
+    const queryString = params.toString();
+
+    await fetch(`/modify?${queryString}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+}
+
+export async function html_read(src){
+    try {
+        const res = await fetch(src);
+        if (!res.ok) {
+            throw new Error('Error al cargar el archivo');
+        }
+        return res.text();
+    } catch(err) {
+        console.error(err);
     }
 }
