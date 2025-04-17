@@ -11,7 +11,7 @@ const app = () => `
 <link rel="stylesheet" href="${style()}">
 
 <header id="header">
-	<h1>Musical scales calculator <img class="icon" src="bin/icons/music-note.png"></h1>
+	<h1>MUSICAL SCALES CALCULATOR <img class="icon" src="bin/icons/music-note.png"></h1>
 	<button id="b_dark_mode"><img class="icon-little" src="bin/icons/night-mode.png" /> ${dark_mode ? "ON" : "OFF"}</button>
 </header>
 

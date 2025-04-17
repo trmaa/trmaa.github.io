@@ -8,7 +8,50 @@
 	</head>
 	<body>
 
-		<h1>I'll be working on that...</h1>
+		<h1><img class="icon" src="bin/icons/music-note.png"> Equal temperament ✗</h1>
+
+		<p>
+			Frequencys are calculated with <b class="formula">f(n) = root_frequency * 2^((n-1)/12)</b>.
+		</p>
+		<p>
+			This is due to the fact that we, as humans, don't perceive the diference between pitches as the diference itself but the relation. So a relation 2/1 is always an octave, 220 to 440 feels the same as 110 to 220, eventhouh the first interval was of 220hz and the second of 110hz which is the half.
+		</p>
+		<p>
+			In other words: the distance between two notes increaces exponencially as expressed on the formula.
+		</p>
+		<p> 
+			See that all this formula does is multiplying a frequency by 2 in case n is 1, and fractioning the octave in equaly proporcional to 12 frequencys when n is not 1. For instance if n is 2, you multiply the root frequency by the 12th root of 2 which is like adding to the root frequency one of 12 proporcional parts from the octave frequency:
+		</p>
+		<p class="formula">
+			f(1) = 440 * 2^(0/12) <b class="comment">//root</b>
+			<br>
+            f(2) = 440 * 2^(1/12) <b class="comment">//root + 1 semitone</b>
+			<br>
+            f(3) = 440 * 2^(2/12) <b class="comment">//root + 2 semitones</b>
+			<br>
+			...
+		</p>
+		<p>
+			Equal temperament is always slightly out of tune but it works for every scale with the same frequencys. It is great for gitars and pianos.
+		</p>
+
+		<h1><img class="icon" src="bin/icons/music-note.png"> Just intonation ✔</h1>
+
+        <p>
+			Frequencys are calculated as harmonics relative to the root frequency. So, harmonics are made by adding one root frequency to the current harmonic: 1st h. = root, 2nd h. = 2*root, 3rd h. = 3*root... <b class="formula">h(n) = n * root_frequency</b>. 
+        </p>
+		<p>
+			Musically, 2nd h. is the octave, 3rd h. is the fifth (an octave higher), 4th h. is the third (an octave higher)... doing this harmonics and puting them all in the same octave by dividing them by 2 as many times as necessary we can get a scale af as many notes as we want:
+		</p>
+		<p> 
+			The rates are: 1/1, 16/15, 9/8, 6/5, 5/4, 4/3, 45/32, 8/5, 3/2, 16/9, 5/3, 21/15, 15/8, 2/1. For 12 notes.
+		</p>
+		<p class="formula">
+			f(n) = rates[n] * root_frequency
+		</p>
+		<p>
+			This intonation is much more in tune for the root scale, however, when modulating frequencys need to be recalculated, otherwise they sound wierd... So is the best option for singing, wind instruments and strings other than gitars and pianos.
+		</p>
 
 	</body>
 </html>
