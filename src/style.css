@@ -1,7 +1,12 @@
 :root {
 	--white: #ddd;
-    --black: #223;
+    --black: #124;
 	--blue: #aaf;
+}
+
+::selection {
+    background-color: var(--blue);
+	color: var(--black);
 }
 
 * {
@@ -27,8 +32,8 @@ body {
 	margin: 0;
     padding-top: 64px;
     padding-bottom: 64px;
-	padding-left: 20%;
-	padding-right: 20%;
+	padding-left: 22%;
+	padding-right: 22%;
 }
 
 h1 {
@@ -89,7 +94,7 @@ select,
 
 .keyboard {
 	border: 2px solid #fff0;
-	border-radius: 15px;
+	border-radius: 5px;
 }
 
 .keyboard:hover {
@@ -120,22 +125,20 @@ button:hover {
     margin: 0; 
 }
 
-.whitekey {
-	border-radius: 10px;
+.whitekey, .blackkey {
+	border-radius: 5px;
 }
 .whitekey:hover {
-    background-color: var(--white);
+    background-color: var(--blue);
     color: var(--black);
 }
 
 .blackkey {
-    border-radius: 10px;
-
     background-color: var(--black);
     color: var(--white);
 }
 .blackkey:hover {
-	background-color: var(--white);
+	background-color: var(--blue);
     color: var(--black);
 }
 
@@ -170,8 +173,13 @@ select:hover {
 }
 
 .icon-little {
-    width: 16px;
-    height: 16px;
+	width: 12px;
+    height: 12px;
+}
+
+.b_remove .icon-little {
+    width: 11px;
+    height: 11px;
 }
 
 #keys {
@@ -200,6 +208,8 @@ select:hover {
 
 button .icon-little {
     filter: invert(0);
+
+	padding: 0;
 }
 button:hover .icon-little {
     filter: invert(1);

@@ -1,6 +1,8 @@
 //import "utilities.js";
 //import "keyboard.js";
 
+//let dark_mode = window.matchMedia &&
+//                window.matchMedia('(prefers-color-scheme: dark)').matches;
 let dark_mode = false;
 const style = () => {
 	return dark_mode ? "src/dark_mode.css" : "src/light_mode.css"; 
@@ -38,9 +40,6 @@ const app = () => `
 
 function toggle_dark_mode() {
     dark_mode = !dark_mode;
-
-	if (dark_mode) window.alert("darkmode is still in development");
-
     app_init();
 }
 

@@ -8,11 +8,13 @@ body {
 }
 
 button {
-	background-color: var(--white);
-	color: var(--black);
+	background-color: var(--black);
+	border: 2px solid var(--white);
+	color: var(--white);
 }
 button:hover {
-	border-color: var(--white);
+	background-color: var(--white);
+	color: var(--black);
 }
 
 select {
@@ -20,25 +22,20 @@ select {
     border-color: var(--white);
 }
 
-.b_remove {
-    background-color: var(--white);
-    color: var(--black);
-}
-
-.b_remove:hover {
-	border-color: #f02;
-}
-
 .whitekey, .blackkey {
 	background-color: #fff0;
     border: 2px solid var(--white);
 
-	color: var(--white);
+	color: var(--black);
+}
+
+.whitekey {
+    background-color: var(--white);
 }
 
 .blackkey {
-    background-color: var(--white);
-	color: var(--black);
+    background-color: var(--black);
+	color: var(--white);
 }
 
 .whitekey:hover, .blackkey:hover {
@@ -58,8 +55,8 @@ select {
     filter: invert(1);
 }
 button .icon-little {
-    filter: invert(0);
+    filter: invert(1);
 }
 button:hover .icon-little {
-    filter: invert(1);
+    filter: invert(0);
 }
