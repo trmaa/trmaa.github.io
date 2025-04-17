@@ -11,19 +11,24 @@ const app = () => `
 <link rel="stylesheet" href="${style()}">
 
 <header id="header">
-	<h1>ESCALES <img class="icon" src="bin/icons/music-note.png"></h1>
+	<h1>Musical scales calculator <img class="icon" src="bin/icons/music-note.png"></h1>
 	<button id="b_dark_mode"><img class="icon-little" src="bin/icons/night-mode.png" /> ${dark_mode ? "ON" : "OFF"}</button>
 </header>
 
-<span>
-	<label>Afinació: </label>
-	<select id="b_intonation">
-		<option value="equal">Igual</option>
-		<option value="just">Justa</option>
-	</select>
-	<button id="b_add_scale">+</button>
-	<button id="b_remove" class="b_remove"><img class="icon-little" src="bin/icons/broom.png" /></button>
-</span>
+<header>
+	<span>
+		<label>Intonation: </label>
+		<select id="b_intonation">
+			<option value="equal">Ecual</option>
+			<option value="just">Just</option>
+		</select>
+		<button id="b_add_scale">+</button>
+		<button id="b_remove" class="b_remove"><img class="icon-little" src="bin/icons/broom.png" /></button>
+	</span>
+	<button onclick="window.open('explanation.html')">
+		Explanation
+	</button>
+</header>
 
 <br></br>
 

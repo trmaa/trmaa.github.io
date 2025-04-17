@@ -4,6 +4,8 @@
 }
 
 * {
+	font-family: "classic";
+	
 	transition: all 0.2s ease-in-out;
 	color: var(--black);
 
