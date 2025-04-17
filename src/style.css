@@ -133,9 +133,15 @@ button:hover {
     color: var(--black);
 }
 
+.whitekey {
+	height: 75px;
+}
+
 .blackkey {
     background-color: var(--black);
     color: var(--white);
+
+	height: 50px;
 }
 .blackkey:hover {
 	background-color: var(--blue);
