@@ -26,16 +26,12 @@ select {
 	background-color: #fff0;
     border: 2px solid var(--white);
 
-	color: var(--black);
-}
-
-.whitekey {
-    background-color: var(--white);
+	color: var(--white);
 }
 
 .blackkey {
-    background-color: var(--black);
-	color: var(--white);
+    background-color: var(--white);
+	color: var(--black);
 }
 
 .whitekey:hover, .blackkey:hover {
