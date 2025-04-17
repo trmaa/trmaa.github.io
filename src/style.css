@@ -93,8 +93,7 @@ select,
 }
 
 .keyboard:hover {
-    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
-	border: 2px solid var(--black);
+    box-shadow: 0 0 4px 2px var(--blue);
 }
 
 button:hover {
@@ -197,4 +196,11 @@ select:hover {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+button .icon-little {
+    filter: invert(0);
+}
+button:hover .icon-little {
+    filter: invert(1);
 }

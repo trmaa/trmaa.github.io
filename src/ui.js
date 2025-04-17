@@ -25,7 +25,7 @@ const app = () => `
 		<button id="b_add_scale">+</button>
 		<button id="b_remove" class="b_remove"><img class="icon-little" src="bin/icons/broom.png" /></button>
 	</span>
-	<button onclick="window.open('explanation.html')">
+	<button onclick="window.open('${dark_mode ? 'explanation_dark.html' : 'explanation.html'}')">
 		Explanation
 	</button>
 </header>

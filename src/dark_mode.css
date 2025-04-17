@@ -1,1 +1,65 @@
+* {
+	color: var(--white);
+}
 
+body {
+	background-color: var(--black);
+    color: var(--white);
+}
+
+button {
+	background-color: var(--white);
+	color: var(--black);
+}
+button:hover {
+	border-color: var(--white);
+}
+
+select {
+	color: var(--white);
+    border-color: var(--white);
+}
+
+.b_remove {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.b_remove:hover {
+	border-color: #f02;
+}
+
+.whitekey, .blackkey {
+	background-color: #fff0;
+    border: 2px solid var(--white);
+
+	color: var(--white);
+}
+
+.blackkey {
+    background-color: var(--white);
+	color: var(--black);
+}
+
+.whitekey:hover, .blackkey:hover {
+    background-color: var(--blue);
+    color: var(--black);
+	border-color: var(--blue);
+}
+
+.keyboard {
+	box-shadow: 0 0 10px var(--white);
+}
+.keyboard:hover {
+    box-shadow: 0 0 10px var(--blue);
+}
+
+.icon {
+    filter: invert(1);
+}
+button .icon-little {
+    filter: invert(0);
+}
+button:hover .icon-little {
+    filter: invert(1);
+}
