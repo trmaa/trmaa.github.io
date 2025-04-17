@@ -188,7 +188,7 @@ function keyboard_add(intonation) {
 
     return `
         <div class="keyboard">
-            <h2>Afinació: ${label}</h2>
+            <h2>Intonation: ${label}</h2>
             <div id="keys">
                 ${keysHTML}
             </div>
