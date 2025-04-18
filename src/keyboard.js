@@ -1,5 +1,5 @@
 // ---------- Global Variables ----------
-const audio_ctx = new window.AudioContext();
+let audio_ctx = new (window.AudioContext || window.webkitAudioContext)();
 const active_oscillators = new Map();
 let sustain = false;
 
@@ -77,7 +77,16 @@ const black_frequencuys = (intonation) => {
 };
 
 // ---------- Audio Playback ----------
+function ensure_audio_context() {
+	if (!audio_ctx) {
+		audio_ctx = new AudioContext();
+	} else if (audio_ctx.state === "suspended") {
+		audio_ctx.resume();
+	}
+}
+
 function play_note_start(freq, key_id) {
+	ensure_audio_context();
 	if (active_oscillators.has(key_id)) {
 		try {
 			active_oscillators.get(key_id).stop();
