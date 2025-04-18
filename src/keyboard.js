@@ -139,6 +139,15 @@ function toggle_sustain() {
 	}
 }
 
+function handle_touch_start(event, freq, key_id) {
+	event.preventDefault();
+	play_note_start(freq, key_id);
+}
+function handle_touch_end(event, key_id) {
+	event.preventDefault();
+	play_note_stop(key_id);
+}
+
 // ---------- Keyboard Renderer ----------
 function keyboard_add(intonation) {
     const white_freqs = white_frequencuys(intonation);
@@ -163,8 +172,8 @@ function keyboard_add(intonation) {
                     onmousedown="play_note_start(${freq}, '${key_id}')"
                     onmouseup="play_note_stop('${key_id}')"
                     onmouseleave="play_note_stop('${key_id}')"
-                    ontouchstart="play_note_start(${freq}, '${key_id}')"
-                    ontouchend="play_note_stop('${key_id}')"
+					ontouchstart="handle_touch_start(event, ${freq}, '${key_id}')"
+					ontouchend="handle_touch_end(event, '${key_id}')"
                 >${freq} Hz</button>
             `;
             whiteIndex++;
@@ -178,8 +187,8 @@ function keyboard_add(intonation) {
                     onmousedown="play_note_start(${freq}, '${key_id}')"
                     onmouseup="play_note_stop('${key_id}')"
                     onmouseleave="play_note_stop('${key_id}')"
-                    ontouchstart="play_note_start(${freq}, '${key_id}')"
-                    ontouchend="play_note_stop('${key_id}')"
+					ontouchstart="handle_touch_start(event, ${freq}, '${key_id}')"
+					ontouchend="handle_touch_end(event, '${key_id}')"
                 >${freq} Hz</button>
             `;
             blackIndex++;
