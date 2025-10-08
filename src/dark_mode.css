@@ -4,7 +4,7 @@
 
 body {
 	background-color: var(--black);
-    color: var(--white);
+	color: var(--white);
 }
 
 button {
@@ -19,24 +19,24 @@ button:hover {
 
 select {
 	color: var(--white);
-    border-color: var(--white);
+	border-color: var(--white);
 }
 
 .whitekey, .blackkey {
 	background-color: #fff0;
-    border: 2px solid var(--white);
+	border: 2px solid var(--white);
 
 	color: var(--white);
 }
 
 .blackkey {
-    background-color: var(--white);
+	background-color: var(--white);
 	color: var(--black);
 }
 
 .whitekey:hover, .blackkey:hover {
-    background-color: var(--blue);
-    color: var(--black);
+	background-color: var(--blue);
+	color: var(--black);
 	border-color: var(--blue);
 }
 
@@ -44,15 +44,15 @@ select {
 	box-shadow: 0 0 10px var(--white);
 }
 .keyboard:hover {
-    box-shadow: 0 0 10px var(--blue);
+	box-shadow: 0 0 10px var(--blue);
 }
 
 .icon {
-    filter: invert(1);
+	filter: invert(1);
 }
 button .icon-little {
-    filter: invert(1);
+	filter: invert(1);
 }
 button:hover .icon-little {
-    filter: invert(0);
+	filter: invert(0);
 }

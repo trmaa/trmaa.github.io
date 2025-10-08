@@ -39,8 +39,8 @@ const app = () => `
 `;
 
 function toggle_dark_mode() {
-    dark_mode = !dark_mode;
-    app_init();
+	dark_mode = !dark_mode;
+	app_init();
 }
 
 function app_init() {
@@ -50,9 +50,9 @@ function app_init() {
 	b_dark_mode.addEventListener("click", toggle_dark_mode);
 
 	let b_remove = document.body.querySelector("#b_remove");
-    b_remove.addEventListener("click", () => {
-    	app_init(); 
-    });
+	b_remove.addEventListener("click", () => {
+		app_init(); 
+	});
 
 	let keyboards = document.body.querySelector("#keyboards");
 	let b_add_scale = document.body.querySelector("#b_add_scale");

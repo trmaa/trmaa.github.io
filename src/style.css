@@ -1,17 +1,17 @@
 :root {
 	--white: #ddd;
-    --black: #124;
+	--black: #124;
 	--blue: #aaf;
 }
 
 ::selection {
-    background-color: var(--blue);
+	background-color: var(--blue);
 	color: var(--black);
 }
 
 * {
 	font-family: "classic";
-	
+
 	transition: all 0.2s ease-in-out;
 	color: var(--black);
 
@@ -19,8 +19,8 @@
 }
 
 header {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 
 	display: flex;
 	align-items: center; 
@@ -30,8 +30,8 @@ header {
 body {
 	background-color: #fff;
 	margin: 0;
-    padding-top: 64px;
-    padding-bottom: 64px;
+	padding-top: 64px;
+	padding-bottom: 64px;
 	padding-left: 22%;
 	padding-right: 22%;
 }
@@ -45,14 +45,14 @@ h1 {
 	font-weight: bolder;
 }
 h2 {
-    margin: 0;
-    padding: 16px;
+	margin: 0;
+	padding: 16px;
 
 	font-weight: bold;
 }
 p {
-    margin: 0;
-    padding: 64px;
+	margin: 0;
+	padding: 64px;
 	padding-bottom: 8px;
 	padding-top: 8px;
 }
@@ -63,33 +63,33 @@ p {
 	text-align: center;
 }
 .comment {
-    color: var(--white);
+	color: var(--white);
 }
 
 button,
 .keyboard{
 	text-decoration: none;
-    cursor: pointer;
+	cursor: pointer;
 
-    margin: 4px 2px;
-    padding: 8px 16px;
+	margin: 4px 2px;
+	padding: 8px 16px;
 
-    border: 2px solid #fff0;
-    border-radius: 100px;
+	border: 2px solid #fff0;
+	border-radius: 100px;
 
-    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
 
 	text-align: center;
 
-    display: inline-block;
-    
+	display: inline-block;
+
 	font-size: 16px;
 }
 
 select,
 .keyboard {
-    background-color: #fff0;
-    color: var(--black);
+	background-color: #fff0;
+	color: var(--black);
 }
 
 .keyboard {
@@ -98,39 +98,39 @@ select,
 }
 
 .keyboard:hover {
-    box-shadow: 0 0 4px 2px var(--blue);
+	box-shadow: 0 0 4px 2px var(--blue);
 }
 
 button:hover {
-    background-color: var(--black);
+	background-color: var(--black);
 	color: var(--white);
-	
-    border: 2px solid #fff0;
+
+	border: 2px solid #fff0;
 }
 
 .b_remove {
-    background-color: #fff0;
-    color: var(--black);
+	background-color: #fff0;
+	color: var(--black);
 }
 
 .b_remove:hover {
-    background-color: #f02 !important;
-    color: #fff !important;
+	background-color: #f02 !important;
+	color: #fff !important;
 }
 
 #keyboards {
 	display: grid;
-    grid-template-column: 1fr;
-    grid-gap: 16px;
-    margin: 0; 
+	grid-template-column: 1fr;
+	grid-gap: 16px;
+	margin: 0; 
 }
 
 .whitekey, .blackkey {
 	border-radius: 5px;
 }
 .whitekey:hover {
-    background-color: var(--blue);
-    color: var(--black);
+	background-color: var(--blue);
+	color: var(--black);
 }
 
 .whitekey {
@@ -138,69 +138,69 @@ button:hover {
 }
 
 .blackkey {
-    background-color: var(--black);
-    color: var(--white);
+	background-color: var(--black);
+	color: var(--white);
 
 	height: 50px;
 }
 .blackkey:hover {
 	background-color: var(--blue);
-    color: var(--black);
+	color: var(--black);
 }
 
 select {
 	text-decoration: none;
-    cursor: pointer;
+	cursor: pointer;
 
 	border: none;
 
-    border-bottom: 1px solid black;
-    border-radius: 0;
+	border-bottom: 1px solid black;
+	border-radius: 0;
 
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 
-    background-color: #fff0;
-    font-size: 16px;
-    padding: 5px;
+	background-color: #fff0;
+	font-size: 16px;
+	padding: 5px;
 }
 
 select:hover {
-    background-color: #0002;
+	background-color: #0002;
 }
 
 .icon {    
-    border-radius: 0;
-    border: none;
+	border-radius: 0;
+	border: none;
 
-    color: black;
+	color: black;
 
-    width: 40px;
-    height: 40px;
+	width: 40px;
+	height: 40px;
 }
 
 .icon-little {
 	width: 12px;
-    height: 12px;
+	height: 12px;
 }
 
 .b_remove .icon-little {
-    width: 11px;
-    height: 11px;
+	width: 11px;
+	height: 11px;
 }
 
 #keys {
 	display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
-    grid-gap: 8px;
-    margin: 0;
+	grid-gap: 8px;
+	margin: 0;
 }
 
 .keyb_contr {
 	display: grid;
-    grid-template-columns: 15fr 1fr;
-    grid-gap: 8px;
-    margin: 0;
+	grid-template-columns: 15fr 1fr;
+	grid-gap: 8px;
+	margin: 0;
 	padding: 0;
 
 	width: 100%;
@@ -213,10 +213,10 @@ select:hover {
 }
 
 button .icon-little {
-    filter: invert(0);
+	filter: invert(0);
 
 	padding: 0;
 }
 button:hover .icon-little {
-    filter: invert(1);
+	filter: invert(1);
 }
